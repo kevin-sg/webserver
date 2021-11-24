@@ -19,10 +19,6 @@ app.get("/", (req, res) => {
 	});
 });
 
-// app.get("/generic", (req, res) => {
-// 	res.sendFile(__dirname + "/public/generic.html");
-// });
-
 app.get("/generic", (req, res) => {
 	res.render("generic", {
 		nombre: "Tomas Sotto",
@@ -38,7 +34,6 @@ app.get("/elements", (req, res) => {
 });
 
 app.get("/*", (req, res) => {
-	// Enviar archivo -> dirname = construir el path
 	res.sendFile(__dirname + "/public/back/404.html");
 });
 
